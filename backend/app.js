@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const cors = require('cors');
+
 
 const userRoutes = require('./routes/user');
 
@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://torai:ma195105@cluster0.wkxrx8i.mongodb.net/test
     next();
   });
 
-  app.use(cors({origin:true,credentials: true}));
+  
 
 
 app.use(express.json());
